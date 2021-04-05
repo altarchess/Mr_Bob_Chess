@@ -317,7 +317,7 @@ int pvSearch(Bitboard &b, ThreadSearch *th, int depth, int alpha, int beta, bool
 
     // Determine if the position is a textbook draw
     if (b.isDraw(ply)) {
-        return 0;
+        return 8-(th->nodes & 15U);
     }
 
 
